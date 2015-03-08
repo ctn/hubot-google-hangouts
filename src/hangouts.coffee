@@ -18,7 +18,8 @@ module.exports = (robot) ->
     console.log msg.message.user
     title = "#{msg.match[2] || msg.message.user.name}-#{+new Date()}"
     slug  = title.replace(/[^0-9a-z-]+/gi, '-')
-    msg.send "I've started a Hangout! Join here: https://plus.google.com/hangouts/_/#{hangoutsDomain}/#{slug}"
+    #msg.send "I've started a Hangout! Join here: https://plus.google.com/hangouts/_/#{hangoutsDomain}/#{slug}"
+    msg.send "I've started a Hangout! Join here: http://hangout.adatao.com/#{slug}"
 
   missingEnvironment = (msg) ->
     missingAnything = false
